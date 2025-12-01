@@ -80,10 +80,10 @@ const store = {
     }
 }
 
-let phoneNumber = "911234567890"
+let phoneNumber = "254741819582"
 let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
-global.botname = "KNIGHT BOT"
+global.botname = "UNKNOWN BOT"
 global.themeemoji = "•"
 
 const settings = require('./settings')
@@ -104,7 +104,7 @@ const question = (text) => {
          
 async function startXeonBotInc() {
     let { version, isLatest } = await fetchLatestBaileysVersion()
-    const { state, saveCreds } = await useMultiFileAuthState(`./session`)
+    
     const msgRetryCounterCache = new NodeCache()
 
     const XeonBotInc = makeWASocket({
@@ -128,6 +128,8 @@ async function startXeonBotInc() {
     })
 
     store.bind(XeonBotInc.ev)
+const settings = require('./settings');
+const sessionId = settings.sessionId;
 
     // Message handling
     XeonBotInc.ev.on('messages.upsert', async chatUpdate => {
