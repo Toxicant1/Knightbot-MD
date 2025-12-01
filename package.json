@@ -1,13 +1,13 @@
 {
-  "name": "knightbot",
+  "name": "unknown",
   "version": "1.0.0",
   "description": "WhatsApp Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docker:build": "docker build -t knightbot .",
-    "docker:run": "docker run -e SESSION_ID=$SESSION_ID knightbot"
+    "docker:build": "docker build -t unknown .",
+    "docker:run": "docker run -e SESSION_ID=$SESSION_ID unknown"
   },
   "keywords": [
     "whatsapp-bot"
